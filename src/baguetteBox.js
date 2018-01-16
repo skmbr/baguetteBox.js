@@ -41,6 +41,7 @@
             fullScreen: false,
             noScrollbars: false,
             bodyClass: 'baguetteBox-open',
+            imageClass: null,
             titleTag: false,
             async: false,
             preload: 2,
@@ -541,6 +542,9 @@
         image.alt = thumbnailElement ? thumbnailElement.alt || '' : '';
         if (options.titleTag && imageCaption) {
             image.title = imageCaption;
+        }
+        if (options.imageClass) {
+            image.className = options.imageClass;
         }
         figure.appendChild(image);
 
